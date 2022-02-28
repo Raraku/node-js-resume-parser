@@ -7,8 +7,9 @@ COPY package*.json ./
 RUN apt-get update && apt-get install -y \
     curl  \
     git  \
+    gcc \
     pkg-config  \
-    python3.7-dev \
+    python3-dev \
     libffi-dev \
     cmake \
     libpoppler-cpp-dev  \
