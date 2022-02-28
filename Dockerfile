@@ -32,9 +32,8 @@ RUN npm install
 
 COPY . .
 
-RUN ls
 
-RUN cd pyresparser && pip3 install .
+RUN cd pyresparser && ls
 
 # spaCy
 RUN pip3 install spacy==2.3.5
