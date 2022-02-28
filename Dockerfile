@@ -27,7 +27,12 @@ RUN wget --no-check-certificate https://dl.xpdfreader.com/xpdf-tools-linux-4.03.
 
 RUN npm install
 
-RUN cd ../pyresparser && pip3 install .
+RUN ls
+
+WORKDIR /pyresparser
+RUN pip3 install .
+
+WORKDIR /app
 
 # spaCy
 RUN pip3 install spacy==2.3.5
