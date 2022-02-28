@@ -28,9 +28,11 @@ RUN wget --no-check-certificate https://dl.xpdfreader.com/xpdf-tools-linux-4.03.
 
 RUN npm install
 
-RUN ls
+
 
 COPY . .
+
+RUN ls
 
 RUN pip3 install pyresparser/.
 
