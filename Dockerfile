@@ -34,7 +34,7 @@ COPY . .
 
 RUN ls
 
-RUN cd pyresparser && pip3 install pyresparser
+RUN cd pyresparser && pip3 install .
 
 # spaCy
 RUN pip3 install spacy==2.3.5
