@@ -32,10 +32,7 @@ RUN ls
 
 COPY . .
 
-WORKDIR /pyresparser
-RUN pip3 install .
-
-WORKDIR /app
+RUN pip3 install pyresparser/.
 
 # spaCy
 RUN pip3 install spacy==2.3.5
