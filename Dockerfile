@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     gcc \
     pkg-config  \
     python3-dev \
+    python3-pip \
     libffi-dev \
     cmake \
     libpoppler-cpp-dev  \
@@ -29,6 +30,8 @@ RUN npm install
 
 RUN ls
 
+COPY . .
+
 WORKDIR /pyresparser
 RUN pip3 install .
 
@@ -42,7 +45,7 @@ RUN python3 -m spacy download en_core_web_sm
 RUN python3 -m nltk.downloader words
 RUN python3 -m nltk.downloader stopwords
 
-COPY . .
+
 
 ENV NODE_ENV=production
 
