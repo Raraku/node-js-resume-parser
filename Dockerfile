@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y \
     curl  \
     git  \
     pkg-config  \
+    python3.7-dev \
+    libffi-dev \
     cmake \
     libpoppler-cpp-dev  \
     tesseract-ocr  \
@@ -23,6 +25,18 @@ RUN wget --no-check-certificate https://dl.xpdfreader.com/xpdf-tools-linux-4.03.
 
 
 RUN npm install
+
+RUN cd pyresparser && pip3 install .
+
+RUN cd ..
+
+# spaCy
+RUN pip3 install spacy==2.3.5
+RUN python3 -m spacy download en_core_web_sm
+
+# nltk
+RUN python3 -m nltk.downloader words
+RUN python3 -m nltk.downloader stopwords
 
 COPY . .
 

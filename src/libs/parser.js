@@ -227,7 +227,6 @@ function parseDictionaryProfiles(row, Resume, rows, i) {
   var regularDictionary = dictionary.profiles,
     find,
     modifiedRow = row;
-  console.log(regularDictionary);
   _.forEach(regularDictionary, function (expression) {
     var expressionHandler;
 
@@ -239,7 +238,6 @@ function parseDictionaryProfiles(row, Resume, rows, i) {
     }
     find = new RegExp(expression).exec(row);
     if (find) {
-      console.log(rows[i + 1]);
       Resume.addKey("profiles", find[0] + "\n");
       modifiedRow = row.replace(find[0], "");
       if (_.isFunction(expressionHandler)) {

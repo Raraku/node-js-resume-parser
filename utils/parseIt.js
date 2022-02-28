@@ -29,7 +29,7 @@ var parser = {
         );
       });
     };
-    console.log("here");
+
     let data = await processing.run(file, onFileReady);
     // console.log(data);
     return data;
