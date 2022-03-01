@@ -1,18 +1,7 @@
 # Node.js Resume parser
 
-Authored by Lizurchik Alexey, extended to work with express by Nick Satija
+This is a node js app with two integrated resume parsers. There's a resume parser using Regular Expressions and a second using Natural Language Processing (A.I) to parse the resumes.
 
-# The Problem
-
-The original parse does not work with express and hence been extended to be able to upload files from express and create a JSON version of resume
-
-# Contest
-
-Develop a parser that is able to parse through CVs / Resumes in the word (.doc or .docx) / RTF / TXT / PDF / HTML format to extract the necessary information in a predefined JSON format. If the CVs / Resumes contain any social media profile links then the solution should also parse the public social profile web-pages and organize the data in JSON format (e.g. Linkedin public profile, Github, etc.)
-
-# Solution
-
-This Resume parser can run through unlimited number of Resumes and get relevant info from that. With full-feature installation it supports most of the common use formats, provided by [textract](https://github.com/dbashford/textract):
 
  - HTML
  - PDF
@@ -29,7 +18,7 @@ This Resume parser can run through unlimited number of Resumes and get relevant 
  - All text/* mime-types.
 
 # Pre-Requirements
-Current solution tested on Windows 7 x64 Maximum (with [babun shell](http://babun.github.io/)), but it also may run on OSX, Linux. Application is hard dependend on text extracting library [textract](https://github.com/dbashford/textract).
+Application is hard dependend on text extracting library [textract](https://github.com/dbashford/textract).
 
 # Fast install
 
